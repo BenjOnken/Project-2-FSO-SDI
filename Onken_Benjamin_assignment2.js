@@ -11,8 +11,8 @@ var greeting = "Good morning! Time to head out fishing!",
 	myName = "Ben",
 	friendName = "Nick",
 	peopleSummary;
-
-	array = [1,2,3,4];
+	caughtSoFar = 0;
+	typeOfFish = ["Walleye", "Pike", "Smallmouth Bass", "Muskie"];
 
 var output = function(out)
 {
@@ -83,6 +83,16 @@ var whoInBoat = function(me,friend)
 	return(peopleSummary);
 };
 
+var whatTypeOfFish = function(numberOfSpecies,typesOfFish)
+{
+	for (var difTypesFish = numberOfSpecies; difTypesFish >= 0 && difTypesFish <= 5; difTypesFish--) 
+	{
+		caughtSoFar++;
+		output("So far we have caught " + caughtSoFar + " types of fish! The most recent was a " + typesOfFish[difTypesFish])
+	};
+	return(caughtSoFar);
+}
+
 output(greeting);
 output("So far we have caught " + fishCaught + " fish.")
 fishCaughtHere(fishCaught);
@@ -98,8 +108,8 @@ else
 };
 
 whoInBoat(myName,friendName);
-
-output(peopleSummary);
+whatTypeOfFish(3,typeOfFish);
+output(peopleSummary + "He missed catching " + caughtSoFar + " species of fish!");
 
 
 if(lunchTime == true)
