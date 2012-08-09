@@ -5,9 +5,11 @@
 
 var greeting = "Good morning! Time to head out fishing!",
 	fishCaught = 12,
-	array = [1,2,3,4],
+	lunchTime = true,
 	sackLunch = false,
-	militaryTime = 22;
+	militaryTime = 22,
+	array = [1,2,3,4];
+
 var output = function(out)
 {
 	console.log(out);
@@ -42,13 +44,31 @@ var lunch = function(timeByHour,broughtFood)
 {
 	if(timeByHour < 13 && timeByHour > 11 && broughtFood == true)
 	{
-		var lunchTime = true;
+		lunchTime = true;
 	}
 	else
 	{
-		var lunchTime = false;
+		lunchTime = false;
 	};
 	return(lunchTime);
+};
+
+var keepFish = function(fishToKeep)
+{
+	output("Since we have 3 people in the boat, the maximum amount of fish we can keep for dinner is 9.")
+	var fishReleased = 0;
+	while(fishToKeep > 9)
+	{
+		fishToKeep--;
+		fishReleased++;
+
+		output("We have released " + fishReleased + " fish and still have " + fishToKeep + " fish left.")
+
+
+
+	}
+	fishCaught = fishToKeep;
+	return(fishCaught);
 };
 
 
@@ -57,14 +77,25 @@ output("So far we have caught " + fishCaught + " fish.")
 fishCaughtHere(fishCaught);
 lunch(militaryTime,sackLunch);
 
-var lunchTime = false;
-
-if(lunchTime == true)
+if(fishCaught > 0)
 {
-	output("Since its late enough, we decided to take a break and have some lunch!");
+	keepFish(fishCaught);
 }
 else
 {
-	output("I just checked and we don't need to stop for lunch yet!");
+	output("I guess we won't be eating any fish tonight.")
 };
 
+
+
+
+
+if(lunchTime == true)
+{
+	output("Well I hope you saved room for dinner after that huge lunch you had today!");
+}
+else
+{
+	output("I bet you guys are starving since you didn't have lunch today!");
+};
+output("We have a grand total of " + fishCaught + " fish to cook for dinner tonight.");
