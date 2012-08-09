@@ -14,7 +14,7 @@ var output = function(out)
 };
 var findANewSpot = function(newSpot)
 {
-	if(newSpot = true)
+	if(newSpot == true)
 	{
 		console.log("We decided that we would find a new fishing spot! So after driving for a bit we arrived at our new spot.");
 	}
@@ -40,30 +40,31 @@ var fishCaughtHere = function(fishCaught)
 
 var lunch = function(timeByHour,broughtFood)
 {
-	if(timeByHour < 13 && timeByHour > 11)
+	if(timeByHour < 13 && timeByHour > 11 && broughtFood == true)
 	{
-		lunchTime = true;
+		var lunchTime = true;
 	}
 	else
 	{
-		lunchTime = false;
+		var lunchTime = false;
 	};
 	return(lunchTime);
 };
 
 
 output(greeting);
+output("So far we have caught " + fishCaught + " fish.")
 fishCaughtHere(fishCaught);
 lunch(militaryTime,sackLunch);
 
-var lunchTime;
+var lunchTime = false;
 
-if(lunchTime = true)
+if(lunchTime == true)
 {
 	output("Since its late enough, we decided to take a break and have some lunch!");
 }
 else
 {
-	output("Its not quite late enough yet for lunch, so we can continue fishing!");
+	output("I just checked and we don't need to stop for lunch yet!");
 };
 
