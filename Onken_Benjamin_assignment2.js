@@ -1,6 +1,8 @@
 /*
-
-
+Benjamin Onken
+8/9/2012
+Project 2
+Let's fish the whole day!
 */
 
 var greeting = "Good morning! Time to head out fishing!",
@@ -94,6 +96,10 @@ var whatTypeOfFish = function(numberOfSpecies,typesOfFish)
 }
 
 output(greeting);
+if(myName || friendName == "Ben")
+{
+	output("You're being guided by Ben!")
+}
 output("So far we have caught " + fishCaught + " fish.")
 fishCaughtHere(fishCaught);
 lunch(militaryTime,sackLunch);
