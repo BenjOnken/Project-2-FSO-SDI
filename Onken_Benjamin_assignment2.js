@@ -8,6 +8,10 @@ var greeting = "Good morning! Time to head out fishing!",
 	lunchTime = true,
 	sackLunch = false,
 	militaryTime = 22,
+	myName = "Ben",
+	friendName = "Nick",
+	peopleSummary;
+
 	array = [1,2,3,4];
 
 var output = function(out)
@@ -71,6 +75,13 @@ var keepFish = function(fishToKeep)
 	return(fishCaught);
 };
 
+var whoInBoat = function(me,friend)
+{
+	var noShow = "Ryan";
+	peopleSummary = me + ", " + friend + ", and the driver were the fishermen in the boat today! " + noShow + " didn't show up unfortunately!";
+	
+	return(peopleSummary);
+};
 
 output(greeting);
 output("So far we have caught " + fishCaught + " fish.")
@@ -86,8 +97,9 @@ else
 	output("I guess we won't be eating any fish tonight.")
 };
 
+whoInBoat(myName,friendName);
 
-
+output(peopleSummary);
 
 
 if(lunchTime == true)
