@@ -61,18 +61,18 @@ var lunch = function(timeByHour,broughtFood)
 
 var keepFish = function(fishToKeep)
 {
-	output("Since we have 3 people in the boat, the maximum amount of fish we can keep for dinner is 9.")
+	output("Since we have 3 people in the boat, the maximum amount of fish we can keep for dinner is 9.");
 	var fishReleased = 0;
 	while(fishToKeep > 9)
 	{
 		fishToKeep--;
 		fishReleased++;
 
-		output("We have released " + fishReleased + " fish and still have " + fishToKeep + " fish left.")
+		output("We have released " + fishReleased + " fish and still have " + fishToKeep + " fish left.");
 
 
 
-	}
+	};
 	fishCaught = fishToKeep;
 	return(fishCaught);
 };
@@ -90,17 +90,17 @@ var whatTypeOfFish = function(numberOfSpecies,typesOfFish)
 	for (var difTypesFish = numberOfSpecies; difTypesFish >= 0 && difTypesFish <= 5; difTypesFish--) 
 	{
 		caughtSoFar++;
-		output("So far we have caught " + caughtSoFar + " types of fish! The most recent was a " + typesOfFish[difTypesFish])
+		output("So far we have caught " + caughtSoFar + " types of fish! The most recent was a " + typesOfFish[difTypesFish]);
 	};
 	return(caughtSoFar);
-}
+};
 
 output(greeting);
 if(myName || friendName == "Ben")
 {
-	output("You're being guided by Ben!")
+	output("You're being guided by Ben!");
 }
-output("So far we have caught " + fishCaught + " fish.")
+output("So far we have caught " + fishCaught + " fish.");
 fishCaughtHere(fishCaught);
 lunch(militaryTime,sackLunch);
 
@@ -110,7 +110,7 @@ if(fishCaught > 0)
 }
 else
 {
-	output("I guess we won't be eating any fish tonight.")
+	output("I guess we won't be eating any fish tonight.");
 };
 
 whoInBoat(myName,friendName);
